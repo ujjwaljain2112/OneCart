@@ -315,4 +315,22 @@ function PlaceOrder() {
                     navigate("/order");
                 } else {
                     toast.error("Order Placement Error");
+                    {method === 'stripe' && (
+                        <Elements stripe={stripePromise}>
+                            <StripeCheckoutForm 
+                                orderItems={orderItems} 
+                                totalAmount={totalAmount} 
+                                formData={formData} 
+                                setCartItem={setCartItem}
+                            />
+                        </Elements>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default PlaceOrder;
+
 
