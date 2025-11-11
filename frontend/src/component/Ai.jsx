@@ -90,8 +90,9 @@ function Ai() {
         navigate("/login")
       } else {
         // toast.error("Give expected voice")
-        speak("This Page not Exists")
-        navigate("/login")
+        speak("This Page does not Exists")
+        speak("navigate to home page")
+        navigate("/")
       }
     }
 
